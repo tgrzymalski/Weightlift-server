@@ -5,7 +5,7 @@ import * as exercises from './exercises_model.mjs';
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT;
+const PORT = process.env.MONGODB_CONNECT_STRING;
 
 app.listen(PORT, async () => {
     await exercises.connect(false)
